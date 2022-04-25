@@ -47,7 +47,7 @@ class ViewController: UIViewController {
     
     func updateWEatherInfo(latitude: Double, lontitude: Double) {
         let session = URLSession.shared
-        let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=Canberra&appid=a7007d41b9dd828665dbb28557093dad)")!
+        let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?lat=57&lon=-2.15&appid=a7007d41b9dd828665dbb28557093dad&units=metric")!
         let task = session.dataTask(with: url) { (data, response, error) in
             guard error == nil else {
                 print("DataTask error: \(error!.localizedDescription)")
